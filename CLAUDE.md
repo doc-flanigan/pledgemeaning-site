@@ -17,11 +17,11 @@ Incremental agents. Confirm each before proceeding.
     amberDark: '#cc7d00'
     cream: '#f5f0e8'
     muted: '#7a8099'
-- 7 hero image placeholders
+- 12 hero image placeholders
 - Confirm dev server
 
 ### Agent 2 — Components
-- HeroCarousel.tsx (7 slides)
+- HeroCarousel.tsx (12 slides)
 - CTAButton.tsx: "Create Your Account — Get 50,000 UEC Free"
 - SecondaryLink.tsx → o7citizen.com
 - DefinitionCard.tsx: term + plain definition + example
