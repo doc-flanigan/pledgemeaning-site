@@ -31,7 +31,7 @@ Incremental agents. Confirm each before proceeding.
 ### Agent 2 — Components
 - HeroCarousel.tsx (12 slides)
 - CTAButton.tsx: "Create Your Account — Get 50,000 UEC Free"
-- SecondaryLink.tsx → o7citizen.com
+- SecondaryLink.tsx → dayonecitizen.com
 - DefinitionCard.tsx: term + plain definition + example
 - Footer.tsx
 
