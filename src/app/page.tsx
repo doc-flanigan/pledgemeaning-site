@@ -5,16 +5,40 @@ import HeroCarousel from "@/components/HeroCarousel";
 import CTAButton from "@/components/CTAButton";
 import SecondaryLink from "@/components/SecondaryLink";
 import DefinitionCard from "@/components/DefinitionCard";
+import { homepageFAQ } from "@/data/faq";
 
 export const metadata: Metadata = {
   title: "What Does Pledge Mean in Star Citizen? | pledgemeaning.com",
   description:
     "In Star Citizen, a 'pledge' is a purchase from the RSI store that funds game development. Here's everything you need to know.",
+  openGraph: {
+    title: "What Does Pledge Mean in Star Citizen?",
+    description:
+      "In Star Citizen, a 'pledge' is a purchase from the RSI store that funds game development. Here's everything you need to know.",
+    url: "https://pledgemeaning.com",
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: homepageFAQ.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
 };
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <NavBar />
       <main className="max-w-6xl mx-auto px-4 py-10">
         {/* H1 + above-fold answer */}
@@ -249,6 +273,19 @@ export default function HomePage() {
             <SecondaryLink href="https://dayonecitizen.com/glossary">
               Full Star Citizen Glossary on Day One Citizen →
             </SecondaryLink>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-cream mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {homepageFAQ.map((item, i) => (
+              <div key={i} className="bg-midnight-mid border border-amber/20 rounded-xl p-6">
+                <h3 className="text-cream font-semibold text-lg mb-2">{item.question}</h3>
+                <p className="text-muted leading-relaxed">{item.answer}</p>
+              </div>
+            ))}
           </div>
         </section>
 
