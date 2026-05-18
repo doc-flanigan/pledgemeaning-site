@@ -94,3 +94,24 @@ Added 2026-05-17. Every referral CTA click fires a background POST to `/api/log`
 - [ ] Click CTA **with** adblocker enabled → Sheet row appears within 5s
 - [ ] Click CTA **with** adblocker enabled → Discord embed appears in #referral-clicks
 - [ ] Click CTA **without** adblocker → same as above
+
+---
+
+## SEO
+
+**Network role:** Definition funnel satellite
+**Search engine:** Both
+
+**Primary keywords:**
+- "what does pledge mean in star citizen"
+- "star citizen pledge"
+- "what is a pledge star citizen"
+
+**Cross-links this site must send (body copy only):**
+- → dayonecitizen.com: "New player guide" CTA
+- → screferralreward.com: "Get a referral bonus when you make your first pledge"
+
+**Do not:**
+- Place cross-portfolio links in footers or link lists — editorial/body copy only
+
+**Full strategy:** `E:\Claude Code\sc-portfolio\docs\seo\README.md`
