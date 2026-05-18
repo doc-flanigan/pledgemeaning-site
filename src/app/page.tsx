@@ -181,6 +181,18 @@ export default function HomePage() {
               </a>{" "}
               for announcements.
             </p>
+            <p className="text-sm mt-4 text-muted leading-relaxed">
+              New to Star Citizen?{" "}
+              <a
+                href="https://dayonecitizen.com"
+                className="text-amber underline hover:opacity-80"
+                target="_blank"
+                rel="noopener"
+              >
+                DayOneCitizen.com
+              </a>{" "}
+              has a plain-English guide for your first 30 days — no jargon, no assumed knowledge.
+            </p>
           </div>
         </section>
 
@@ -230,6 +242,18 @@ export default function HomePage() {
               when you sign up maximizes the value of your first pledge — you get up to{" "}
               <strong className="text-amber">50,000 UEC</strong> in total bonuses, which gives
               you extra in-game currency to spend on upgrades, equipment, and trading.
+            </p>
+            <p className="text-sm mt-3 text-muted leading-relaxed">
+              When you make your first pledge,{" "}
+              <a
+                href="https://screferralreward.com"
+                className="text-amber underline hover:opacity-80"
+                target="_blank"
+                rel="noopener"
+              >
+                use a referral code
+              </a>{" "}
+              to get 50,000 UEC added to your hangar at no extra cost.
             </p>
             <div className="flex flex-wrap gap-4 mt-6">
               <CTAButton />
