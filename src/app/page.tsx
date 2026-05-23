@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "In Star Citizen, a 'pledge' is a purchase from the RSI store that funds game development. Here's everything you need to know.",
   alternates: {
-    canonical: '/',
+    canonical: 'https://pledgemeaning.com',
   },
   openGraph: {
     title: "What Does Pledge Mean in Star Citizen?",
