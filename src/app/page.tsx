@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
 import CTAButton from "@/components/CTAButton";
 import SecondaryLink from "@/components/SecondaryLink";
@@ -42,7 +40,6 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <NavBar />
       <main className="max-w-6xl mx-auto px-4 py-10">
         {/* H1 + above-fold answer */}
         <section className="text-center mb-10">
@@ -247,15 +244,8 @@ export default function HomePage() {
               you extra in-game currency to spend on upgrades, equipment, and trading.
             </p>
             <p className="text-sm mt-3 text-muted leading-relaxed">
-              When you make your first pledge,{" "}
-              <a
-                href="https://screferralreward.com"
-                className="text-amber underline hover:opacity-80"
-                target="_blank"
-                rel="noopener"
-              >
-                use a referral code
-              </a>{" "}
+              When you make your first pledge, use referral code{" "}
+              <strong className="text-amber">STAR-GCQJ-N6NC</strong>{" "}
               to get 50,000 UEC added to your hangar at no extra cost.
             </p>
             <div className="flex flex-wrap gap-4 mt-6">
@@ -326,7 +316,6 @@ export default function HomePage() {
           <CTAButton />
         </section>
       </main>
-      <Footer />
     </>
   );
 }

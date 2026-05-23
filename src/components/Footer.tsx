@@ -67,19 +67,13 @@ export default function Footer() {
             <p className="text-muted text-xs">
               © {new Date().getFullYear()} pledgemeaning.com — Made by the community, for the community.
             </p>
-            <a
-              href="https://dayonecitizen.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/images/made-by-community.png"
-                alt="Made by community badge"
-                width={120}
-                height={40}
-                className="opacity-70 hover:opacity-100 transition-opacity"
-              />
-            </a>
+            <Image
+              src="/images/made-by-community.png"
+              alt="Made by community badge"
+              width={120}
+              height={40}
+              className="opacity-70"
+            />
           </div>
         </div>
       </div>

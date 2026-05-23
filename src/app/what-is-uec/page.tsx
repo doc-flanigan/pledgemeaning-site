@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
 import CTAButton from "@/components/CTAButton";
 import DefinitionCard from "@/components/DefinitionCard";
 import SecondaryLink from "@/components/SecondaryLink";
@@ -18,7 +16,6 @@ export const metadata: Metadata = {
 export default function WhatIsUEC() {
   return (
     <>
-      <NavBar />
       <main className="max-w-6xl mx-auto px-4 py-10">
         <section className="mb-10">
           <p className="text-amber text-sm font-medium mb-2 uppercase tracking-wider">
@@ -147,7 +144,6 @@ export default function WhatIsUEC() {
           <CTAButton />
         </section>
       </main>
-      <Footer />
     </>
   );
 }
