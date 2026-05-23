@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import CTAButton from "@/components/CTAButton";
@@ -9,6 +10,9 @@ export const metadata: Metadata = {
   title: "What Is UEC in Star Citizen? | pledgemeaning.com",
   description:
     "UEC (United Earth Credits) is Star Citizen's in-game currency used to buy ships, gear, and services. Learn how to earn and spend UEC.",
+  alternates: {
+    canonical: '/what-is-uec',
+  },
 };
 
 export default function WhatIsUEC() {
@@ -101,27 +105,27 @@ export default function WhatIsUEC() {
         <section className="mb-16">
           <h2 className="text-2xl font-bold text-cream mb-6">Related Terms</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <a
+            <Link
               href="/"
               className="bg-midnight-mid border border-amber/20 rounded-xl p-5 hover:border-amber/50 transition-colors"
             >
               <p className="text-amber font-bold mb-1">Pledge</p>
               <p className="text-muted text-sm">What a pledge is and how it works in Star Citizen</p>
-            </a>
-            <a
+            </Link>
+            <Link
               href="/what-is-lti"
               className="bg-midnight-mid border border-amber/20 rounded-xl p-5 hover:border-amber/50 transition-colors"
             >
               <p className="text-amber font-bold mb-1">LTI</p>
               <p className="text-muted text-sm">Lifetime Insurance — permanent ship coverage</p>
-            </a>
-            <a
+            </Link>
+            <Link
               href="/what-is-ccu"
               className="bg-midnight-mid border border-amber/20 rounded-xl p-5 hover:border-amber/50 transition-colors"
             >
               <p className="text-amber font-bold mb-1">CCU</p>
               <p className="text-muted text-sm">Cross-Chassis Upgrade — swap your ship pledge</p>
-            </a>
+            </Link>
           </div>
         </section>
 

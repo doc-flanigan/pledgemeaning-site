@@ -32,6 +32,14 @@ export const metadata: Metadata = {
     title: "What Does Pledge Mean in Star Citizen?",
     description:
       "In Star Citizen, a 'pledge' is a purchase from the RSI store that funds game development. Here's everything you need to know.",
+    images: [
+      {
+        url: '/images/hero/hero-01.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'What does pledge mean in Star Citizen?',
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

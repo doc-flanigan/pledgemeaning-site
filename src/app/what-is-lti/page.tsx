@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import CTAButton from "@/components/CTAButton";
@@ -9,6 +10,9 @@ export const metadata: Metadata = {
   title: "What Is LTI in Star Citizen? | pledgemeaning.com",
   description:
     "LTI (Lifetime Insurance) is permanent ship insurance in Star Citizen. Learn what LTI means, why it matters, and how to get it.",
+  alternates: {
+    canonical: '/what-is-lti',
+  },
 };
 
 export default function WhatIsLTI() {
@@ -128,27 +132,27 @@ export default function WhatIsLTI() {
         <section className="mb-16">
           <h2 className="text-2xl font-bold text-cream mb-6">Related Terms</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <a
+            <Link
               href="/"
               className="bg-midnight-mid border border-amber/20 rounded-xl p-5 hover:border-amber/50 transition-colors"
             >
               <p className="text-amber font-bold mb-1">Pledge</p>
               <p className="text-muted text-sm">What a pledge is and how it works in Star Citizen</p>
-            </a>
-            <a
+            </Link>
+            <Link
               href="/what-is-uec"
               className="bg-midnight-mid border border-amber/20 rounded-xl p-5 hover:border-amber/50 transition-colors"
             >
               <p className="text-amber font-bold mb-1">UEC</p>
               <p className="text-muted text-sm">United Earth Credits — the in-game currency</p>
-            </a>
-            <a
+            </Link>
+            <Link
               href="/what-is-ccu"
               className="bg-midnight-mid border border-amber/20 rounded-xl p-5 hover:border-amber/50 transition-colors"
             >
               <p className="text-amber font-bold mb-1">CCU</p>
               <p className="text-muted text-sm">Cross-Chassis Upgrade — how LTI transfers to bigger ships</p>
-            </a>
+            </Link>
           </div>
         </section>
 

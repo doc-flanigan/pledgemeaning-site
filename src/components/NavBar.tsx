@@ -19,14 +19,6 @@ export default function NavBar() {
           <Link href="/what-is-ccu" className="text-muted hover:text-cream transition-colors">
             CCU
           </Link>
-          <a
-            href="https://dayonecitizen.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-amber hover:text-amber-dark transition-colors font-medium"
-          >
-            Hub →
-          </a>
         </div>
       </div>
     </nav>

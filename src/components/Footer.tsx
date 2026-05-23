@@ -44,21 +44,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <p className="text-cream font-semibold mb-3 text-sm uppercase tracking-wider">Network</p>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href="https://dayonecitizen.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted hover:text-amber transition-colors"
-                >
-                  Day One Citizen Hub
-                </a>
-              </li>
-            </ul>
-          </div>
+
         </div>
 
         <div className="border-t border-amber/10 pt-8 space-y-4">
