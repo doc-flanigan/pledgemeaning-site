@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BreadcrumbsJsonLd from "@/components/BreadcrumbsJsonLd";
 import CTAButton from "@/components/CTAButton";
 import DefinitionCard from "@/components/DefinitionCard";
 import SecondaryLink from "@/components/SecondaryLink";
@@ -17,6 +18,10 @@ export default function WhatIsCCU() {
   return (
     <>
       <main className="max-w-6xl mx-auto px-4 py-10">
+        <BreadcrumbsJsonLd items={[
+          { name: 'Home', url: '/' },
+          { name: 'What Is a CCU?', url: '/what-is-ccu' },
+        ]} />
         <section className="mb-10">
           <p className="text-amber text-sm font-medium mb-2 uppercase tracking-wider">
             Star Citizen Glossary
