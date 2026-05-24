@@ -31,7 +31,7 @@ export default function CTAButton({ className = '' }: CTAButtonProps) {
       target="_blank"
       rel="noopener noreferrer sponsored"
       onClick={handleClick}
-      className={`inline-block bg-amber hover:bg-amber-dark text-midnight font-bold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg shadow-amber/20 ${className}`}
+      className={`inline-block bg-amber hover:bg-amber-dark text-midnight font-bold px-6 py-4 rounded-lg text-base md:text-lg transition-colors shadow-lg shadow-amber/20 text-center max-w-full ${className}`}
     >
       Create Your Account — Get 50,000 UEC Free
     </a>
