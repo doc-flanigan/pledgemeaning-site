@@ -1,15 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.pledgemeaning.com' }],
-        destination: 'https://pledgemeaning.com/:path*',
-        permanent: true,
-      },
-    ];
-  },
+  // www → apex redirect is handled by Vercel's Domains config — do not add a duplicate rule here.
 };
 
 export default nextConfig;
