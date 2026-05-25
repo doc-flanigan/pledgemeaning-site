@@ -4,6 +4,8 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import CookieBanner from "@/components/CookieBanner";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -73,6 +75,8 @@ export default function RootLayout({
         {children}
         <Footer />
         <Analytics />
+        <GoogleAnalytics />
+        <CookieBanner />
       </body>
     </html>
   );
