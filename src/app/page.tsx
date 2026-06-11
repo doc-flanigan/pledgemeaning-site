@@ -6,16 +6,16 @@ import DefinitionCard from "@/components/DefinitionCard";
 import { homepageFAQ } from "@/data/faq";
 
 export const metadata: Metadata = {
-  title: "What Does Pledge Mean in Star Citizen? | pledgemeaning.com",
+  title: "Star Citizen Pledges Explained — What 'Pledge' Means (RSI)",
   description:
-    "In Star Citizen, a 'pledge' is a purchase from the RSI store that funds game development. Here's everything you need to know.",
+    "In Star Citizen, a 'pledge' means buying a ship or package from RSI to fund the game — what it really means, how it works, and whether you need to pledge to play.",
   alternates: {
     canonical: 'https://pledgemeaning.com',
   },
   openGraph: {
-    title: "What Does Pledge Mean in Star Citizen?",
+    title: "Star Citizen Pledges Explained — What 'Pledge' Means",
     description:
-      "In Star Citizen, a 'pledge' is a purchase from the RSI store that funds game development. Here's everything you need to know.",
+      "In Star Citizen, a 'pledge' means buying a ship or package from RSI to fund the game — what it really means, how it works, and whether you need to pledge to play.",
     url: "https://pledgemeaning.com",
   },
 };
