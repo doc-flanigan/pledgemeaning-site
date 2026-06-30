@@ -6,7 +6,7 @@ import DefinitionCard from "@/components/DefinitionCard";
 import SecondaryLink from "@/components/SecondaryLink";
 
 export const metadata: Metadata = {
-  title: "What Is UEC in Star Citizen? | pledgemeaning.com",
+  title: "What Is UEC in Star Citizen?",
   description:
     "UEC (United Earth Credits) is Star Citizen's in-game currency used to buy ships, gear, and services. Learn how to earn and spend UEC.",
   alternates: {

@@ -6,7 +6,7 @@ import DefinitionCard from "@/components/DefinitionCard";
 import SecondaryLink from "@/components/SecondaryLink";
 
 export const metadata: Metadata = {
-  title: "What Is a CCU in Star Citizen? | pledgemeaning.com",
+  title: "What Is a CCU in Star Citizen?",
   description:
     "A CCU (Cross-Chassis Upgrade) lets you upgrade one Star Citizen ship pledge to another. Learn how CCUs work and why players use them.",
   alternates: {

@@ -6,7 +6,7 @@ import DefinitionCard from "@/components/DefinitionCard";
 import SecondaryLink from "@/components/SecondaryLink";
 
 export const metadata: Metadata = {
-  title: "What Is LTI in Star Citizen? | pledgemeaning.com",
+  title: "What Is LTI in Star Citizen?",
   description:
     "LTI (Lifetime Insurance) is permanent ship insurance in Star Citizen. Learn what LTI means, why it matters, and how to get it.",
   alternates: {
