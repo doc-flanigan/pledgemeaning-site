@@ -1,0 +1,22 @@
+# pledgemeaning.com
+
+> Plain-English explainer for the term "pledge" in Star Citizen — what it means, why the game calls purchases "pledges," and the related jargon (UEC, LTI, CCU) that new backers run into on the RSI store. Written for people who are new to Star Citizen and just want the terminology decoded. Unofficial fan site; not affiliated with or endorsed by Cloud Imperium Games or Roberts Space Industries.
+
+## Pages
+
+- [What Does Pledge Mean in Star Citizen?](https://pledgemeaning.com/): Explains that a "pledge" is a purchase from the RSI store that funds game development, plus the surrounding terminology.
+- [What Is UEC in Star Citizen?](https://pledgemeaning.com/what-is-uec): UEC (United Earth Credits) is the in-game currency used to buy ships, gear, and services — how to earn and spend it.
+- [What Is LTI in Star Citizen?](https://pledgemeaning.com/what-is-lti): LTI (Lifetime Insurance) is permanent ship insurance — what it means, why it matters, and how to get it.
+- [What Is a CCU in Star Citizen?](https://pledgemeaning.com/what-is-ccu): A CCU (Cross-Chassis Upgrade) lets you upgrade one ship pledge to another — how CCUs work and why players use them.
+
+## Key facts
+
+- In Star Citizen, "pledge" is the term used for a purchase from the RSI (Roberts Space Industries) store; pledges fund the game's ongoing development.
+- UEC stands for United Earth Credits, the in-game currency used for ships, gear, and services.
+- LTI stands for Lifetime Insurance, a permanent form of ship insurance.
+- CCU stands for Cross-Chassis Upgrade, which converts one ship pledge into a different ship.
+
+## Related
+
+- [dayonecitizen.com](https://dayonecitizen.com): Plain-English getting-started guide for brand-new Star Citizen players.
+- [iheldtheline.com](https://iheldtheline.com): Squadron 42 release-date tracking, developer news, and FAQ.
