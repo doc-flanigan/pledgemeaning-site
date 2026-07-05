@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const slides = [
-  { id: 1, src: "/images/hero/hero-01.jpg", alt: "Star Citizen — Constellation Andromeda in space" },
+  { id: 1, src: "/images/hero/hero-01.jpg", alt: "Star Citizen — UEE Bengal carrier over a planet" },
   { id: 2, src: "/images/hero/hero-02.jpg", alt: "Star Citizen — Aegis Retaliator bomber" },
   { id: 3, src: "/images/hero/hero-03.jpg", alt: "Star Citizen — Stanton system from orbit" },
   { id: 4, src: "/images/hero/hero-04.jpg", alt: "Star Citizen — RSI Polaris capital ship" },
@@ -17,10 +17,18 @@ const slides = [
   { id: 10, src: "/images/hero/hero-10.jpg", alt: "Star Citizen — Hurston industrial zone" },
   { id: 11, src: "/images/hero/hero-11.jpg", alt: "Star Citizen — Anvil Carrack explorer" },
   { id: 12, src: "/images/hero/hero-12.jpg", alt: "Star Citizen — planetary ring asteroid field" },
+  { id: 13, src: "/images/hero/hero-13.jpg", alt: "Star Citizen — Aegis Sabre over a green planet" },
+  { id: 14, src: "/images/hero/hero-14.jpg", alt: "Star Citizen — Aegis Hammerhead over a moon" },
+  { id: 15, src: "/images/hero/hero-15.jpg", alt: "Star Citizen — fighter formation at sunset" },
+  { id: 16, src: "/images/hero/hero-16.jpg", alt: "Star Citizen — bombers above sunset clouds" },
+  { id: 17, src: "/images/hero/hero-17.jpg", alt: "Star Citizen — Anvil F8C Lightning on a landing pad" },
+  { id: 18, src: "/images/hero/hero-18.jpg", alt: "Star Citizen — Idris frigate firing its railgun" },
 ];
 
+const START = 12;
+
 export default function HeroCarousel() {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(START);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -46,7 +54,7 @@ export default function HeroCarousel() {
             fill
             className="object-cover"
             unoptimized
-            priority={current === 0}
+            priority={current === START}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 to-transparent" />
         </motion.div>
