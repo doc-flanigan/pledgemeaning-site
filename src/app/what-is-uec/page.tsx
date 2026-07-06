@@ -146,7 +146,7 @@ export default function WhatIsUEC() {
             Create your account with our referral code and get 50,000 UEC in bonuses — the best
             possible start to your Star Citizen career.
           </p>
-          <CTAButton />
+          <CTAButton trackingLabel="what-is-uec-final-cta" />
         </section>
       </main>
     </>

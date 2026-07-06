@@ -170,7 +170,7 @@ export default function WhatIsCCU() {
             Create your account with our referral code. Get your starter ship + 50,000 UEC
             bonus, then CCU your way to the ship you really want.
           </p>
-          <CTAButton />
+          <CTAButton trackingLabel="what-is-ccu-final-cta" />
         </section>
       </main>
     </>

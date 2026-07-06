@@ -172,7 +172,7 @@ export default function WhatIsLTI() {
           <p className="text-muted mb-8 max-w-xl mx-auto">
             Use our referral code when signing up to maximize your in-game currency bonus.
           </p>
-          <CTAButton />
+          <CTAButton trackingLabel="what-is-lti-final-cta" />
         </section>
       </main>
     </>

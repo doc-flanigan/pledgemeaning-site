@@ -249,7 +249,7 @@ export default function HomePage() {
               to get 50,000 UEC added to your hangar at no extra cost.
             </p>
             <div className="flex flex-wrap gap-4 mt-6">
-              <CTAButton />
+              <CTAButton trackingLabel="home-referral-bonus" />
             </div>
           </div>
         </section>
@@ -313,7 +313,7 @@ export default function HomePage() {
             Use our referral code to get 50,000 UEC free when you create your account and make
             your first pledge. It costs nothing extra.
           </p>
-          <CTAButton />
+          <CTAButton trackingLabel="home-final-cta" />
         </section>
       </main>
     </>
