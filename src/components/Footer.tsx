@@ -63,6 +63,12 @@ export default function Footer() {
             receive compensation for referrals.
           </p>
 
+          <p className="text-muted text-xs leading-relaxed">
+            <strong className="text-cream">Who runs this:</strong> pledgemeaning.com is run by
+            Doc_Flanigan, a real Star Citizen community member. The referral code on this site
+            is his, disclosed openly and verified monthly against the live RSI signup page.
+          </p>
+
           <div className="flex items-center justify-between flex-wrap gap-4 pt-2">
             <p className="text-muted text-xs">
               © {new Date().getFullYear()} pledgemeaning.com — Made by the community, for the community.

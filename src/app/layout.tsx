@@ -18,6 +18,26 @@ const geistMono = localFont({
 
 const BASE_URL = "https://pledgemeaning.com";
 
+// Site-wide WebSite schema with Person authorship (Doc_Flanigan identity).
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "pledgemeaning.com",
+  url: BASE_URL,
+  description:
+    "In Star Citizen, a 'pledge' is a purchase from the RSI store that funds game development. Unofficial fan site.",
+  author: {
+    "@type": "Person",
+    name: "Doc_Flanigan",
+    url: "https://dayonecitizen.com",
+  },
+  publisher: {
+    "@type": "Person",
+    name: "Doc_Flanigan",
+    url: "https://dayonecitizen.com",
+  },
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
@@ -69,6 +89,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-midnight text-cream`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <NavBar />
         {children}
         <Footer />
