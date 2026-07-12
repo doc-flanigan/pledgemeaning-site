@@ -3,6 +3,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import CTAButton from "@/components/CTAButton";
 import SecondaryLink from "@/components/SecondaryLink";
 import DefinitionCard from "@/components/DefinitionCard";
+import PageSources from "@/components/PageSources";
 import { homepageFAQ } from "@/data/faq";
 
 export const metadata: Metadata = {
@@ -230,18 +231,19 @@ export default function HomePage() {
           <div className="bg-midnight-mid border border-amber/30 rounded-xl p-8">
             <p className="text-cream leading-relaxed mb-4">
               When you create a new Star Citizen account using a referral code, you receive a
-              bonus of <strong className="text-amber">5,000 UEC</strong> added to your account.
-              More importantly, when you make your first pledge (buy a game package), both you
-              and the referrer earn additional rewards.
+              one-time enlistment bonus of <strong className="text-amber">50,000 UEC</strong>{" "}
+              added to your account — no purchase required, and the bonus stays on your account
+              permanently. When you later make your first pledge (buy a game package), the
+              referrer earns recruitment rewards too.
             </p>
             <p className="text-cream leading-relaxed mb-4">
               Using our referral code{" "}
               <code className="bg-midnight text-amber px-2 py-1 rounded font-mono text-sm">
                 STAR-GCQJ-N6NC
               </code>{" "}
-              when you sign up maximizes the value of your first pledge — you get up to{" "}
-              <strong className="text-amber">50,000 UEC</strong> in total bonuses, which gives
-              you extra in-game currency to spend on upgrades, equipment, and trading.
+              when you sign up gets you the full{" "}
+              <strong className="text-amber">50,000 UEC</strong> enlistment bonus — extra
+              in-game currency to spend on upgrades, equipment, and trading.
             </p>
             <p className="text-sm mt-3 text-muted leading-relaxed">
               When you make your first pledge, use referral code{" "}
@@ -306,12 +308,14 @@ export default function HomePage() {
           </div>
         </section>
 
+        <PageSources route="/" />
+
         {/* Final CTA */}
         <section className="text-center py-12 border-t border-amber/20">
           <h2 className="text-2xl font-bold text-cream mb-3">Ready to Make Your First Pledge?</h2>
           <p className="text-muted mb-8 max-w-xl mx-auto">
-            Use our referral code to get 50,000 UEC free when you create your account and make
-            your first pledge. It costs nothing extra.
+            Use our referral code to get 50,000 UEC free when you create your account. It costs
+            nothing extra — no purchase required.
           </p>
           <CTAButton trackingLabel="home-final-cta" />
         </section>

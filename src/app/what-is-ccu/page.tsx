@@ -3,6 +3,7 @@ import Link from "next/link";
 import BreadcrumbsJsonLd from "@/components/BreadcrumbsJsonLd";
 import CTAButton from "@/components/CTAButton";
 import DefinitionCard from "@/components/DefinitionCard";
+import PageSources from "@/components/PageSources";
 import SecondaryLink from "@/components/SecondaryLink";
 
 export const metadata: Metadata = {
@@ -14,6 +15,49 @@ export const metadata: Metadata = {
   },
 };
 
+const definedTermSchema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  name: "CCU",
+  description:
+    "A CCU (Cross-Chassis Upgrade) is a Star Citizen pledge store item that upgrades one ship to a more expensive ship for only the price difference, with insurance (including LTI) transferring to the new ship.",
+  inDefinedTermSet: {
+    "@type": "DefinedTermSet",
+    name: "Star Citizen terminology",
+  },
+};
+
+const ccuFAQ = [
+  {
+    question: "What is a CCU chain?",
+    answer:
+      "A series of upgrades applied one after another — for example from a cheap LTI starter up to an expensive endgame ship — always paying just the price difference at each step. Chains are often cheaper than buying the target ship directly and preserve Lifetime Insurance along the way.",
+  },
+  {
+    question: "Does insurance transfer when you apply a CCU?",
+    answer:
+      "Yes. When you apply a CCU in your RSI Hangar, your ship becomes the upgraded version and its insurance status — including LTI — carries over to the new ship.",
+  },
+  {
+    question: "What is a Warbond CCU?",
+    answer:
+      "A special CCU available only during events like IAE, priced at a discount (typically 5-10% vs the standard price) — but it must be purchased with new money, not store credit, and availability is limited.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: ccuFAQ.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
 export default function WhatIsCCU() {
   return (
     <>
@@ -22,6 +66,14 @@ export default function WhatIsCCU() {
           { name: 'Home', url: '/' },
           { name: 'What Is a CCU?', url: '/what-is-ccu' },
         ]} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
         <section className="mb-10">
           <p className="text-amber text-sm font-medium mb-2 uppercase tracking-wider">
             Star Citizen Glossary
@@ -129,6 +181,18 @@ export default function WhatIsCCU() {
         </section>
 
         <section className="mb-16">
+          <h2 className="text-2xl font-bold text-cream mb-6">CCU — Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {ccuFAQ.map((item, i) => (
+              <div key={i} className="bg-midnight-mid border border-amber/20 rounded-xl p-6">
+                <h3 className="text-cream font-semibold text-lg mb-2">{item.question}</h3>
+                <p className="text-muted leading-relaxed">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
           <h2 className="text-2xl font-bold text-cream mb-6">Related Terms</h2>
           <div className="grid md:grid-cols-2 gap-4">
             <Link
@@ -161,6 +225,8 @@ export default function WhatIsCCU() {
             Full SC Glossary on Day One Citizen →
           </SecondaryLink>
         </section>
+
+        <PageSources route="/what-is-ccu" />
 
         <section className="text-center py-12 border-t border-amber/20">
           <h2 className="text-2xl font-bold text-cream mb-3">

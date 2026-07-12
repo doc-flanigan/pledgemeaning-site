@@ -22,7 +22,7 @@ export const homepageFAQ = [
   {
     question: "What is the referral bonus for new pledges?",
     answer:
-      "When you create a new account using a referral code like STAR-GCQJ-N6NC, you receive a 5,000 UEC signing bonus. When you make your first pledge (game package purchase), both you and the referrer earn additional rewards — up to 50,000 UEC total.",
+      "When you create a new account using a referral code like STAR-GCQJ-N6NC, you receive a one-time 50,000 UEC enlistment bonus — no purchase required. When you later make your first pledge (game package purchase), the referring player also earns recruitment rewards.",
   },
   {
     question: "Can I upgrade my pledge later?",

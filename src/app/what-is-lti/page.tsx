@@ -3,6 +3,7 @@ import Link from "next/link";
 import BreadcrumbsJsonLd from "@/components/BreadcrumbsJsonLd";
 import CTAButton from "@/components/CTAButton";
 import DefinitionCard from "@/components/DefinitionCard";
+import PageSources from "@/components/PageSources";
 import SecondaryLink from "@/components/SecondaryLink";
 
 export const metadata: Metadata = {
@@ -14,6 +15,49 @@ export const metadata: Metadata = {
   },
 };
 
+const definedTermSchema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  name: "LTI",
+  description:
+    "LTI (Lifetime Insurance) is a special insurance tier attached to certain Star Citizen ship pledges that provides permanent hull insurance with no renewal required.",
+  inDefinedTermSet: {
+    "@type": "DefinedTermSet",
+    name: "Star Citizen terminology",
+  },
+};
+
+const ltiFAQ = [
+  {
+    question: "Does LTI cover cargo, weapons, or components?",
+    answer:
+      "No. LTI covers only the ship hull itself. If your LTI ship is destroyed in-game, you claim it at an insurance terminal and receive a replacement hull — cargo, weapons, and components are not covered.",
+  },
+  {
+    question: "Does LTI transfer when you upgrade a ship?",
+    answer:
+      "Yes. If you own an LTI ship and apply a Cross-Chassis Upgrade (CCU) to a more expensive ship, the Lifetime Insurance transfers to the new ship. This is why CCU chains are often built from an LTI starter.",
+  },
+  {
+    question: "What happens if a ship doesn't have LTI?",
+    answer:
+      "It carries standard time-limited insurance (3 months, 6 months, or 1 year). When that expires you must renew it with in-game UEC. Renewal is affordable to maintain — LTI simply removes the recurring cost forever.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: ltiFAQ.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
 export default function WhatIsLTI() {
   return (
     <>
@@ -22,6 +66,14 @@ export default function WhatIsLTI() {
           { name: 'Home', url: '/' },
           { name: 'What Is LTI?', url: '/what-is-lti' },
         ]} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
         <section className="mb-10">
           <p className="text-amber text-sm font-medium mb-2 uppercase tracking-wider">
             Star Citizen Glossary
@@ -132,6 +184,18 @@ export default function WhatIsLTI() {
         </section>
 
         <section className="mb-16">
+          <h2 className="text-2xl font-bold text-cream mb-6">LTI — Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {ltiFAQ.map((item, i) => (
+              <div key={i} className="bg-midnight-mid border border-amber/20 rounded-xl p-6">
+                <h3 className="text-cream font-semibold text-lg mb-2">{item.question}</h3>
+                <p className="text-muted leading-relaxed">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
           <h2 className="text-2xl font-bold text-cream mb-6">Related Terms</h2>
           <div className="grid md:grid-cols-2 gap-4">
             <Link
@@ -164,6 +228,8 @@ export default function WhatIsLTI() {
             Full SC Glossary on Day One Citizen →
           </SecondaryLink>
         </section>
+
+        <PageSources route="/what-is-lti" />
 
         <section className="text-center py-12 border-t border-amber/20">
           <h2 className="text-2xl font-bold text-cream mb-3">

@@ -3,15 +3,59 @@ import Link from "next/link";
 import BreadcrumbsJsonLd from "@/components/BreadcrumbsJsonLd";
 import CTAButton from "@/components/CTAButton";
 import DefinitionCard from "@/components/DefinitionCard";
+import PageSources from "@/components/PageSources";
 import SecondaryLink from "@/components/SecondaryLink";
 
 export const metadata: Metadata = {
   title: "What Is UEC in Star Citizen?",
   description:
-    "UEC (United Earth Credits) is Star Citizen's in-game currency used to buy ships, gear, and services. Learn how to earn and spend UEC.",
+    "UEC (United Earth Credits) is Star Citizen's in-game currency used to buy ships, gear, and services. Learn how UEC differs from aUEC and how to earn it.",
   alternates: {
     canonical: '/what-is-uec',
   },
+};
+
+const definedTermSchema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  name: "UEC",
+  description:
+    "UEC (United Earth Credits) is the official in-game currency of Star Citizen, used to buy ships, gear, ammunition, and services inside the game.",
+  inDefinedTermSet: {
+    "@type": "DefinedTermSet",
+    name: "Star Citizen terminology",
+  },
+};
+
+const uecFAQ = [
+  {
+    question: "What is the difference between UEC and aUEC?",
+    answer:
+      "aUEC (Alpha UEC) is the current in-game currency during Star Citizen's Alpha — it works the same way but resets periodically with major patches. UEC is the permanent version of the currency that carries forward when Star Citizen fully launches and is not affected by resets.",
+  },
+  {
+    question: "How do you earn UEC in Star Citizen?",
+    answer:
+      "In-game missions — delivery, bounty hunting, mining, salvage, and trading — all pay aUEC. Small amounts of UEC can also be purchased from the RSI store, and creating your account with a referral code adds a one-time 50,000 UEC enlistment bonus.",
+  },
+  {
+    question: "Does the referral bonus reset with Alpha patches?",
+    answer:
+      "No. The 50,000 UEC referral enlistment bonus is credited in UEC — the permanent currency — so it is not affected by aUEC patch resets and will be available at launch.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: uecFAQ.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
 };
 
 export default function WhatIsUEC() {
@@ -22,6 +66,14 @@ export default function WhatIsUEC() {
           { name: 'Home', url: '/' },
           { name: 'What Is UEC?', url: '/what-is-uec' },
         ]} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
         <section className="mb-10">
           <p className="text-amber text-sm font-medium mb-2 uppercase tracking-wider">
             Star Citizen Glossary
@@ -65,7 +117,7 @@ export default function WhatIsUEC() {
             <DefinitionCard
               term="UEC (Live UEC)"
               definition="The permanent version of the currency that will carry forward when Star Citizen fully launches. Some UEC can be purchased via the RSI store and is not affected by resets."
-              example="Example: A referral bonus of 5,000 UEC is added to your account and will be available at launch."
+              example="Example: The 50,000 UEC referral enlistment bonus is added to your account in UEC and will be available at launch."
             />
           </div>
         </section>
@@ -77,7 +129,7 @@ export default function WhatIsUEC() {
               {[
                 {
                   title: "Use a referral code when signing up",
-                  desc: "You get a bonus of 5,000 UEC just for using a referral code. This is the easiest free UEC.",
+                  desc: "New accounts created with a referral code receive a one-time 50,000 UEC enlistment bonus — no purchase required. This is the easiest free UEC.",
                 },
                 {
                   title: "Complete missions in-game",
@@ -101,6 +153,18 @@ export default function WhatIsUEC() {
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-cream mb-6">UEC — Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {uecFAQ.map((item, i) => (
+              <div key={i} className="bg-midnight-mid border border-amber/20 rounded-xl p-6">
+                <h3 className="text-cream font-semibold text-lg mb-2">{item.question}</h3>
+                <p className="text-muted leading-relaxed">{item.answer}</p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -137,6 +201,8 @@ export default function WhatIsUEC() {
             Full SC Glossary on Day One Citizen →
           </SecondaryLink>
         </section>
+
+        <PageSources route="/what-is-uec" />
 
         <section className="text-center py-12 border-t border-amber/20">
           <h2 className="text-2xl font-bold text-cream mb-3">
