@@ -90,6 +90,16 @@ Added 2026-05-17. Every referral CTA click fires a background POST to `/api/log`
 
 > **Note:** Endpoint was renamed from `/api/track-click` → `/api/log` because adblocker filter lists (EasyPrivacy, uBlock Origin) blocked the original URL pattern client-side.
 
+### Abuse guards (added 2026-07-14, network-wide)
+
+After a bot replayed 26 identical click POSTs in 31s (2026-07-15 03:37 UTC), `/api/log` gained in-route guards — identical implementation in every network repo:
+
+- **Same-origin check** — POSTs without a matching `Origin`/`Referer` host → 403 (blocks curl/replay loops)
+- **Per-IP throttle** — max 10 events/min/IP → 429 (in-memory; effective because Fluid Compute reuses instances)
+- **Dedupe** — identical `(ip, site, label, page)` within 30s is dropped silently
+- **Discord flood breaker** — max 5 embeds/min, then one "alerts muted" summary embed; Sheet logging continues
+- **Forensics** — payload now includes `ipHash` + `userAgent` (Apps Script must be updated to add columns before they appear in the Sheet)
+
 ### TODO: Verify end-to-end on this site
 - [ ] Click CTA **with** adblocker enabled → Sheet row appears within 5s
 - [ ] Click CTA **with** adblocker enabled → Discord embed appears in #referral-clicks
