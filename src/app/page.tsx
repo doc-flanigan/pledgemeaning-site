@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     canonical: 'https://pledgemeaning.com',
   },
   openGraph: {
+    images: ['/images/hero/hero-01.jpg'],
     title: "Star Citizen Pledges Explained — What 'Pledge' Means",
     description:
       "In Star Citizen, a 'pledge' means buying a ship or package from RSI to fund the game — what it really means, how it works, and whether you need to pledge to play.",
