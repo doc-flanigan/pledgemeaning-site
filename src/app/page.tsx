@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import HeroCarousel from "@/components/HeroCarousel";
 import CTAButton from "@/components/CTAButton";
 import SecondaryLink from "@/components/SecondaryLink";
@@ -78,6 +79,19 @@ export default function HomePage() {
               2012 where backers &ldquo;pledged&rdquo; money to support development. The language
               stuck even as the game moved to its own store.
             </p>
+            <figure className="mt-6 overflow-hidden rounded-xl border border-amber/20">
+              <Image
+                src="/images/screenshots/pledge-store-starter-packs-menu.jpg"
+                alt="The RSI Pledge Store menu on robertsspaceindustries.com with the All Products tab open and the Star Citizen Starter Packs category highlighted."
+                width={1200}
+                height={654}
+                className="h-auto w-full"
+              />
+              <figcaption className="bg-midnight px-4 py-3 text-xs text-muted">
+                The pledge store on the RSI website — when players say &ldquo;pledge,&rdquo; they
+                mean buying from this store.
+              </figcaption>
+            </figure>
           </div>
         </section>
 
@@ -152,6 +166,19 @@ export default function HomePage() {
               example="Example: The Lightspeed helmet is available as a standalone gear pledge."
             />
           </div>
+          <figure className="mt-6 overflow-hidden rounded-xl border border-amber/20">
+            <Image
+              src="/images/screenshots/avenger-titan.jpg"
+              alt="An Aegis Avenger Titan in flight firing its nose-mounted gun — a popular combat-capable first ship pledge in Star Citizen."
+              width={1820}
+              height={1024}
+              className="h-auto w-full"
+            />
+            <figcaption className="bg-midnight px-4 py-3 text-xs text-muted">
+              What you get in return: a real, flyable ship. The Avenger Titan is a popular
+              first pledge for new players.
+            </figcaption>
+          </figure>
         </section>
 
         {/* Do You Need to Pledge to Play? */}
@@ -223,6 +250,19 @@ export default function HomePage() {
               Starter ships are capable vessels — don&rsquo;t let the &ldquo;starter&rdquo; label
               put you off. Many veteran players keep an Aurora as a utility ship for years.
             </p>
+            <figure className="mt-6 overflow-hidden rounded-xl border border-amber/20">
+              <Image
+                src="/images/screenshots/add-to-cart-citizen-starter-pack.jpg"
+                alt="RSI pledge store cart confirmation showing a Citizen Starter Pack package added for $45.00 USD, with the Checkout button highlighted."
+                width={952}
+                height={468}
+                className="h-auto w-full"
+              />
+              <figcaption className="bg-midnight px-4 py-3 text-xs text-muted">
+                A starter package in the RSI store cart — one purchase covers game access and
+                your first ship.
+              </figcaption>
+            </figure>
           </div>
         </section>
 
@@ -246,6 +286,18 @@ export default function HomePage() {
               <strong className="text-amber">50,000 UEC</strong> enlistment bonus — extra
               in-game currency to spend on upgrades, equipment, and trading.
             </p>
+            <figure className="mb-4 overflow-hidden rounded-xl border border-amber/20">
+              <Image
+                src="/images/screenshots/rsi-signup-referral-code-field.jpg"
+                alt="Star Citizen RSI signup form with the Referral Code field highlighted, showing code STAR-GCQJ-N6NC successfully applied."
+                width={1200}
+                height={1069}
+                className="h-auto w-full"
+              />
+              <figcaption className="bg-midnight px-4 py-3 text-xs text-muted">
+                The Referral Code field on the RSI signup page, with the code applied.
+              </figcaption>
+            </figure>
             <p className="text-sm mt-3 text-muted leading-relaxed">
               When you make your first pledge, use referral code{" "}
               <strong className="text-amber">STAR-GCQJ-N6NC</strong>{" "}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import BreadcrumbsJsonLd from "@/components/BreadcrumbsJsonLd";
 import CTAButton from "@/components/CTAButton";
@@ -26,6 +27,45 @@ const definedTermSchema = {
     name: "Star Citizen terminology",
   },
 };
+
+const ccuSteps: {
+  title: string;
+  desc: string;
+  img?: { src: string; alt: string; caption: string; width: number; height: number };
+}[] = [
+  {
+    title: "Start with a ship pledge",
+    desc: "You need to own a ship first — this is the ship you'll be upgrading from. Ideally, an LTI ship if you want to preserve Lifetime Insurance.",
+  },
+  {
+    title: "Buy a CCU from the pledge store",
+    desc: "Find the CCU for your target ship. The price is the difference between your current ship's base price and the target ship's base price.",
+    img: {
+      src: "/images/screenshots/ccu-chains-pledge-store-ccu-available.jpg",
+      alt: "RSI pledge store Ship Upgrade screen showing a CCU from the $90 Aegis Gladius to the $110 MISC Freelancer, priced at $20 with an Add to Cart button.",
+      caption:
+        "A CCU in the pledge store: Gladius ($90) to Freelancer ($110) costs the $20 difference.",
+      width: 1200,
+      height: 801,
+    },
+  },
+  {
+    title: "Apply the CCU to your ship",
+    desc: "In your RSI Hangar, apply the CCU to your current ship. Your ship becomes the upgraded version. Insurance status transfers.",
+    img: {
+      src: "/images/screenshots/ccu-chains-rsi-hangar-apply-ccu.jpg",
+      alt: "The My Hangar page on the RSI website showing an upgrade pledge (Freelancer DUR to Hull B) with the Apply Upgrade button.",
+      caption:
+        "Applying a CCU in My Hangar — the Apply Upgrade button converts your ship to the new one.",
+      width: 813,
+      height: 513,
+    },
+  },
+  {
+    title: "Repeat to chain upgrades",
+    desc: "You can buy and apply multiple CCUs over time to step up from a starter ship to progressively larger ships, always paying just the price difference.",
+  },
+];
 
 const ccuFAQ = [
   {
@@ -110,29 +150,26 @@ export default function WhatIsCCU() {
           <h2 className="text-2xl font-bold text-cream mb-6">How CCUs Work</h2>
           <div className="bg-midnight-mid border border-amber/20 rounded-xl p-8">
             <ol className="space-y-5">
-              {[
-                {
-                  title: "Start with a ship pledge",
-                  desc: "You need to own a ship first — this is the ship you'll be upgrading from. Ideally, an LTI ship if you want to preserve Lifetime Insurance.",
-                },
-                {
-                  title: "Buy a CCU from the pledge store",
-                  desc: "Find the CCU for your target ship. The price is the difference between your current ship's base price and the target ship's base price.",
-                },
-                {
-                  title: "Apply the CCU to your ship",
-                  desc: "In your RSI Hangar, apply the CCU to your current ship. Your ship becomes the upgraded version. Insurance status transfers.",
-                },
-                {
-                  title: "Repeat to chain upgrades",
-                  desc: "You can buy and apply multiple CCUs over time to step up from a starter ship to progressively larger ships, always paying just the price difference.",
-                },
-              ].map((item, i) => (
+              {ccuSteps.map((item, i) => (
                 <li key={i} className="flex gap-4">
                   <span className="text-amber font-bold text-xl shrink-0">{i + 1}.</span>
                   <div>
                     <p className="text-cream font-medium">{item.title}</p>
                     <p className="text-muted text-sm mt-1">{item.desc}</p>
+                    {item.img && (
+                      <figure className="mt-4 overflow-hidden rounded-xl border border-amber/20">
+                        <Image
+                          src={item.img.src}
+                          alt={item.img.alt}
+                          width={item.img.width}
+                          height={item.img.height}
+                          className="h-auto w-full"
+                        />
+                        <figcaption className="bg-midnight px-4 py-3 text-xs text-muted">
+                          {item.img.caption}
+                        </figcaption>
+                      </figure>
+                    )}
                   </div>
                 </li>
               ))}
