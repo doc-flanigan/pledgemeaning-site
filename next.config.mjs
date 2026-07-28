@@ -1,15 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // www → apex redirect is handled by Vercel's Domains config — do not add a duplicate rule here.
   async redirects() {
+    // SUNSET 2026-07-27: site retired per the 2026-07-28 kill review
+    // (docs/seo/kill-review-2026-07-28.md — 0 Google clicks, 0 real referral
+    // clicks, 0 AI-bot fetches in 7d, position worsening). The whole domain
+    // now 301s to the hub's glossary, which carries the Pledge definition.
     return [
       {
-        // vercel.app alias served a full indexable duplicate (network-wide
-        // GSC duplicate-canonical fix, 2026-07-18). Exact match keeps
-        // preview URLs working.
         source: '/:path*',
-        has: [{ type: 'host', value: 'pledgemeaning-site.vercel.app' }],
-        destination: 'https://pledgemeaning.com/:path*',
+        destination: 'https://dayonecitizen.com/glossary#letter-P',
         permanent: true,
       },
     ];
